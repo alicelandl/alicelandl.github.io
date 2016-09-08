@@ -21,7 +21,7 @@ Quick Start
 set up blog(在本地建立一个名为Hexo的文件夹，然后在此文件夹中右键打开Git Bash)
 1$ hexo init
 Hexo随后会自动在目标文件夹建立网站所需要的文件，">
-<meta property="og:updated_time" content="2016-09-08T13:24:36.155Z">
+<meta property="og:updated_time" content="2016-09-08T13:47:18.175Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
 <meta name="twitter:description" content="Hexo是什么Hexo是基于nodejs的一个快速、简洁且高效的博客框架。
@@ -67,9 +67,9 @@ Hexo随后会自动在目标文件夹建立网站所需要的文件，">
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -121,22 +121,25 @@ Hexo随后会自动在目标文件夹建立网站所需要的文件，">
 <li><p>编辑文章<br>hexo new “My New Post”会在D:\Hexo\source_posts目录下生成一个markdown文件：My-New-Post.md</p>
 </li>
 </ol>
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>   部署到Github<br>   配置_config.yml文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Deployment</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy: </div><div class="line">  type: git</div><div class="line">  repository: https://github.com/alicelandl/alicelandl.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<h2 id="部署到Github"><a href="#部署到Github" class="headerlink" title="部署到Github"></a>部署到Github</h2><p>   1、安装hexo关于git管理组件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
+<p>   2、配置_config.yml文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Deployment</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy: </div><div class="line">  type: git</div><div class="line">  repository: https://github.com/alicelandl/alicelandl.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<p>   3、deploy<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure></p>
 <p>  部署完使用<a href="https://alicelandl.github.io/" target="_blank" rel="external">https://alicelandl.github.io/</a> 访问。</p>
 <h2 id="常用命令总结"><a href="#常用命令总结" class="headerlink" title="常用命令总结"></a>常用命令总结</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;postName&quot; #新建文章</div><div class="line">hexo new page &quot;pageName&quot; #新建页面</div><div class="line">hexo generate #生成静态页面至public目录</div><div class="line">hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）</div><div class="line">hexo deploy #将.deploy目录部署到GitHub</div><div class="line">hexo help  # 查看帮助</div><div class="line">hexo version  #查看Hexo的版本</div><div class="line"></div><div class="line">hexo deploy -g  #生成加部署</div><div class="line">hexo server -g  #生成加预览</div><div class="line"></div><div class="line">hexo n == hexo new</div><div class="line">hexo g == hexo generate</div><div class="line">hexo s == hexo server</div><div class="line">hexo d == hexo deploy</div></pre></td></tr></table></figure>
-<h2 id="安装部署过程中可能遇到的问题"><a href="#安装部署过程中可能遇到的问题" class="headerlink" title="安装部署过程中可能遇到的问题"></a>安装部署过程中可能遇到的问题</h2><h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><ol>
-<li>默认主题是landscape</li>
-<li>主题更换 （next主题的配置和优化， <a href="http://blog.csdn.net/willxue123/article/details/50994852" target="_blank" rel="external">http://blog.csdn.net/willxue123/article/details/50994852</a> ）</li>
+<h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><ol>
+<li><p>默认主题是landscape， <a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">Hexo All Themes</a> </p>
+</li>
+<li><p>主题更换<br>1）下载安装next主题</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
+<p>2）启用主题<br>打开 站点配置文件， 找到 theme 字段，并将其值更改为 next </p>
+</li>
 </ol>
-<p>1）下载安装next主题<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure></p>
-<p> 2）启用主题<br> 打开 站点配置文件， 找到 theme 字段，并将其值更改为 next </p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p> <a href="https://hexo.io/zh-cn/docs" target="_blank" rel="external">中文</a><br> <a href="https://hexo.io/docs" target="_blank" rel="external">英文</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/06/HEXO/" data-id="cisud97aa0000gwgfnruztros" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2016/09/06/HEXO/" data-id="cisue35ja0000q0gf6rugewky" class="article-share-link">Share</a>
       
       
     </footer>
@@ -147,7 +150,7 @@ Hexo随后会自动在目标文件夹建立网站所需要的文件，">
   
   
     <a href="/2016/09/06/My-New-Post/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ancien</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">My New Post</div>
     </a>
   
@@ -180,7 +183,7 @@ Hexo随后会自动在目标文件夹建立网站所需要的文件，">
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -209,7 +212,7 @@ Hexo随后会自动在目标文件夹建立网站所需要的文件，">
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2016 John Doe<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
